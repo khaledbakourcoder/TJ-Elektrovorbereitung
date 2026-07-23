@@ -38,7 +38,7 @@ export const MainSERVICES: IService[] = [
         ]
     },
     {
-        id: "fräsen",
+        id: "freasen",
         title: "Fräsen",
         subTitle: "Flächiges Abfräsen von Beton, Estrich und Putzschichten",
         shortDescription: "Effizientes Vorbereiten und Anpassen von Wand- und Bodenkanälen auf großen Flächen.",
