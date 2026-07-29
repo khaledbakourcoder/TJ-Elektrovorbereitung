@@ -14,9 +14,56 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://tj-elektrovorbereitung.de";
+
 export const metadata: Metadata = {
-  title: "TJ Elektrovorbereitung – Saubere Vorarbeiten im Bau",
-  description: "Schlitzen, Fräsen, Stemmen, Kernbohrungen – Ihr Partner für präzise Elektrovorarbeiten.",
+  title: {
+    default: "TJ Elektrovorbereitung – Saubere Vorarbeiten im Bau",
+    template: "%s | TJ Elektrovorbereitung",
+  },
+  description:
+    "Schlitzen, Fräsen, Stemmen, Kernbohrungen – wir machen die Vorarbeit für Elektriker. Festpreis, sauber, staubarm.",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: "TJ Elektrovorbereitung",
+    url: "/",
+    title: "TJ Elektrovorbereitung – Saubere Vorarbeiten im Bau",
+    description:
+      "Schlitzen, Fräsen, Stemmen, Kernbohrungen – wir machen die Vorarbeit für Elektriker. Festpreis, sauber, staubarm.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TJ Elektrovorbereitung – Saubere Vorarbeiten im Bau",
+    description:
+      "Schlitzen, Fräsen, Stemmen, Kernbohrungen – wir machen die Vorarbeit für Elektriker.",
+  },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
+  themeColor: "#002d4b",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    "Elektrovorbereitung",
+    "Schlitzen",
+    "Fräsen",
+    "Stemmen",
+    "Kernbohrung",
+    "Wandsägen",
+    "Rohbau",
+    "Elektroinstallation",
+    "Vorarbeiten",
+    "Flensburg",
+    "TJ Elektrovorbereitung",
+  ],
 };
 
 export default function RootLayout({

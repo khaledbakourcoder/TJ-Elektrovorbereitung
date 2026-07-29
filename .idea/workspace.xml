@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29d8ea71-f348-4108-a7dd-9b87c16dbb72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/clients/WhatsApp Image 2026-07-28 at 16.15.54.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/MainService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Data/MainService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Types/Service.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Types/Service.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/impressum/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/impressum/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/kontakt/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/kontakt/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/leistungen/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OtherServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OtherServices.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/QuoteRequestBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/QuoteRequestBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ServiceDescription.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ServiceDescription.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ServiceSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ServiceSections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/client-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/client-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/client-3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/client-4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/client-5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/client-6.svg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Gh7ARxdldaQ9RoRLWaBRVbS6Sr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/khaledbakour/Desktop/Projects/elektro-vorbereitung-seite/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/khaledbakour/Desktop/Projects/elektro-vorbereitung-seite/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/clients" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.24374.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29d8ea71-f348-4108-a7dd-9b87c16dbb72" name="Changes" comment="" />
+      <created>1784411803628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784411803628</updated>
+      <workItem from="1784411804747" duration="6338000" />
+      <workItem from="1784521988273" duration="140000" />
+      <workItem from="1784522133304" duration="3067000" />
+      <workItem from="1784580967430" duration="19514000" />
+      <workItem from="1785173457041" duration="2057000" />
+      <workItem from="1785323482935" duration="8958000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/[id]/page.tsx</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

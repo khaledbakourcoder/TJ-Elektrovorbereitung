@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Impressum",
+    description: "Angaben gemäß § 5 TMG – TJ Elektrovorbereitung, Inhaber Taha Alabd.",
+};
+
 export default function ImpressumPage() {
     return (
         <div className="min-h-screen bg-white text-gray-900">
@@ -13,7 +20,7 @@ export default function ImpressumPage() {
                     </p>
                     <div className="space-y-1 text-gray-700 leading-relaxed">
                         <p>Taha Alabd</p>
-                        <p>TJ Objekt Services</p>
+                        <p>TJ Elektrovorbereitung</p>
                         <p>Thomas Mann Straße 12</p>
                         <p>24937 Flensburg</p>
                         <p>Steuernummer: 1500901057</p>
@@ -35,8 +42,8 @@ export default function ImpressumPage() {
                         </p>
                         <p>
                             <span className="text-gray-400 mr-3">E-Mail</span>
-                            <a href="mailto:info@tj-objektservice.de" className="hover:text-logo-blue transition-colors">
-                                info@tj-objektservice.de
+                            <a href="mailto:info@tj-elektrovorbereitung.de" className="hover:text-logo-blue transition-colors">
+                                info@tj-elektrovorbereitung.de
                             </a>
                         </p>
                     </div>
