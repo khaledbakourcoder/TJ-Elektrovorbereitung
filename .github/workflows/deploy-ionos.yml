@@ -37,6 +37,11 @@ jobs:
           SFTP_TARGET_DIR: ${{ secrets.IONOS_TARGET_DIR }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
+          # Leerzeichen/Zeilenumbrüche entfernen, die beim Einfügen der Secrets mitkommen können.
+          SFTP_HOST=$(printf %s "$SFTP_HOST" | tr -d '[:space:]')
+          SFTP_USER=$(printf %s "$SFTP_USER" | tr -d '[:space:]')
+          SFTP_TARGET_DIR=$(printf %s "$SFTP_TARGET_DIR" | tr -d '[:space:]')
+          export LFTP_PASSWORD=$(printf %s "$SFTP_PASSWORD" | tr -d '\r\n')
           # Schutz: Auf dem Webspace liegen weitere Seiten (Tj-Objektservice, logs).
           # --delete darf nur im Ordner der Website laufen, nie im Root.
           case "$SFTP_TARGET_DIR" in
@@ -51,11 +56,15 @@ jobs:
             echo "=== TESTLAUF: Es wird nichts hochgeladen oder gelöscht ==="
           fi
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          # Keine Anführungszeichen im lftp-Skript: lftp übernimmt sie sonst wörtlich.
+          # Passwort kommt über LFTP_PASSWORD (--env-password), nicht über die Kommandozeile.
+          # cmd:fail-exit bricht bei jedem Fehler ab (z. B. Anmeldung fehlgeschlagen).
           lftp -e "
+            set cmd:fail-exit yes;
             set sftp:auto-confirm yes;
             set net:max-retries 3;
-            open -u \"$SFTP_USER\",\"$SFTP_PASSWORD\" sftp://$SFTP_HOST;
+            open --env-password -u $SFTP_USER sftp://$SFTP_HOST;
             cls -la /;
-            mirror --reverse --delete --verbose --parallel=4 $MIRROR_OPTS out/ \"$SFTP_TARGET_DIR\";
+            mirror --reverse --delete --verbose --parallel=4 $MIRROR_OPTS out/ $SFTP_TARGET_DIR;
             bye
           "
