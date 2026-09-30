@@ -4,9 +4,21 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Kontakt",
     description: "Rufen Sie an, schreiben Sie eine Mail oder kommen Sie vorbei – wir melden uns schnell.",
+    alternates: {
+        canonical: "/kontakt",
+    },
     openGraph: {
         title: "Kontakt | TJ Elektrovorbereitung",
         description: "Rufen Sie an, schreiben Sie eine Mail oder kommen Sie vorbei – wir melden uns schnell.",
+        url: "https://tj-elektrovorbereitung.de/kontakt",
+        images: [
+            {
+                url: "https://tj-elektrovorbereitung.de/og-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "TJ Elektrovorbereitung – Kontakt",
+            },
+        ],
     },
 };
 

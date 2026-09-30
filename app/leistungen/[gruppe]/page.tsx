@@ -16,9 +16,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { gruppe: gruppeId } = await params;
     const gruppe = LEISTUNGSGRUPPEN.find((g) => g.id === gruppeId);
     if (!gruppe) return { title: "Nicht gefunden" };
+
+    const siteUrl = "https://tj-elektrovorbereitung.de";
+    const pageUrl = `${siteUrl}/leistungen/${gruppe.id}`;
+
     return {
-        title: `${gruppe.title} | TJ Elektro Vorbereitung`,
+        title: gruppe.title,
         description: gruppe.description,
+        alternates: {
+            canonical: `/leistungen/${gruppe.id}`,
+        },
+        openGraph: {
+            type: "website",
+            locale: "de_DE",
+            siteName: "TJ Elektrovorbereitung",
+            url: pageUrl,
+            title: `${gruppe.title} – TJ Elektrovorbereitung`,
+            description: gruppe.description,
+            images: [
+                {
+                    url: `${siteUrl}/og-image.jpg`,
+                    width: 1200,
+                    height: 630,
+                    alt: `${gruppe.title} – TJ Elektrovorbereitung Flensburg`,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${gruppe.title} – TJ Elektrovorbereitung`,
+            description: gruppe.description,
+            images: [`${siteUrl}/og-image.jpg`],
+        },
     };
 }
 
@@ -243,8 +272,39 @@ export default async function GruppenDetailPage({ params }: Props) {
     const colors = GRUPPE_COLORS[gruppe.id] ?? DEFAULT_COLORS;
     const otherGruppen = LEISTUNGSGRUPPEN.filter((g) => g.id !== gruppe.id);
 
+    const siteUrl = "https://tj-elektrovorbereitung.de";
+
     return (
         <div className="min-h-screen bg-white text-gray-900">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        itemListElement: [
+                            {
+                                "@type": "ListItem",
+                                position: 1,
+                                name: "Startseite",
+                                item: siteUrl,
+                            },
+                            {
+                                "@type": "ListItem",
+                                position: 2,
+                                name: "Leistungen",
+                                item: `${siteUrl}/leistungen`,
+                            },
+                            {
+                                "@type": "ListItem",
+                                position: 3,
+                                name: gruppe.title,
+                                item: `${siteUrl}/leistungen/${gruppe.id}`,
+                            },
+                        ],
+                    }),
+                }}
+            />
 
             {/* ── Hero-Banner mit Noise ──────────────────────────── */}
             <section className={`relative ${colors.header} text-white overflow-hidden`}>

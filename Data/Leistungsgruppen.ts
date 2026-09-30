@@ -87,9 +87,7 @@ export const LEISTUNGSGRUPPEN: IServiceGroup[] = [
         title: "Abbrucharbeiten",
         subTitle: "Kontrollierter Rückbau im Kleinformat",
         description:
-            "Mal eine Wand rausnehmen, Fliesen runter oder Estrich ab – das machen wir mit. Ganze Häuser reißen wir nicht ab.",
-        hinweis:
-            "Nur Kleinformat: Einzelne Wände, Fliesenflächen, Estrich. Komplette Gebäude machen wir nicht.",
+            "Mal eine Wand rausnehmen, Fliesen runter oder Estrich ab – das machen wir mit.",
         icon: "/icons/abbruch.svg",
         subServices: [
             {

@@ -105,7 +105,7 @@ export default function Header() {
                             >
                                 <div className="relative w-28 h-16 sm:w-40 sm:h-20 flex-shrink-0">
                                     <Image
-                                        src="/Logo.png"
+                                        src="/Logo.webp"
                                         alt="TJ Elektrovorbereitung Logo"
                                         fill
                                         className="object-contain object-left"
@@ -226,7 +226,7 @@ export default function Header() {
                 <div className="flex items-center justify-between p-4 min-h-[80px] bg-white border-b border-gray-200 flex-shrink-0">
                     <Link href="/" onClick={closeAll} className="flex items-center">
                         <div className="relative w-28 h-16">
-                            <Image src="/Logo.png" alt="TJ Elektrovorbereitung Logo" fill className="object-contain object-center" />
+                            <Image src="/Logo.webp" alt="TJ Elektrovorbereitung Logo" fill className="object-contain object-center" />
                         </div>
                     </Link>
                     <button onClick={closeAll} className="p-1 text-gray-500 hover:text-gray-900 focus:outline-none cursor-pointer touch-action-manipulation" aria-label="Menü schließen">

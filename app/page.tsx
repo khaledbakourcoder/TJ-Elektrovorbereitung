@@ -11,13 +11,15 @@ const stats = [
 ];
 
 const clientLogos = [
-    { name: "Hock Bartelsen", src: "/clients/elektrotechnik-hock-bartelsen_logo__msi___png.webp" },
-    { name: "SEH", src: "/clients/SEH-Logomit-Rand.avif" },
-    { name: "Partner 1", src: "/clients/105782.svg" },
-    { name: "Partner 2", src: "/clients/115247.png" },
-    { name: "Partner 3", src: "/clients/Download.png" },
-    { name: "Partner 4", src: "/clients/logo.png" },
-    { name: "Partner 5", src: "/clients/WhatsApp Image 2026-07-28 at 16.15.54.jpeg" },
+    { name: "Elektro Wende", src: "/clients/105782.svg", href: "https://www.elektro-wende.de/home.html" },
+    { name: "Schwitzkowski Haus & Elektrotechnik GmbH", src: "/clients/115247.webp", href: "https://www.elektro-flensburg.de/home.html" },
+    { name: "Elektrotechnik Hock Bartelsen", src: "/clients/elektrotechnik-hock-bartelsen_logo__msi___png.webp", href: "https://www.elektriker-handewitt.de/" },
+    { name: "SEH Elektroanlagen", src: "/clients/SEH-Logomit-Rand.avif", href: "https://www.se-haupt.de/" },
+    { name: "Botho-Franck GmbH", src: "/clients/botho-franck.png", href: "https://www.botho-franck.de/" },
+    { name: "Energietechnik Nord GmbH", src: "/clients/energietechnik-nord-etn.jpg", href: "http://www.energietechniknord.de/" },
+    { name: "AMH-Elektrotechnik GmbH & Co. KG", src: "/clients/amh-elektrotechnik.png", href: "https://www.amh-elektrotechnik.de/home.html" },
+    { name: "Elektro Nicolaisen", src: "/clients/logo.png", href: "https://www.elektro-nicolaisen.de/" },
+    { name: "DP Versorgungstechnik", src: "/clients/dp-versorgungstechnik.png", href: "https://dp-versorgungstechnik.de/" },
 ];
 
 /* ── Industrial SVG icons per group ─────────────────────────── */
@@ -197,6 +199,7 @@ export default function Home() {
                             {/* ── Top Zone: Bild/Icon-Bereich ─────────── */}
                             <Link
                                 href={`/leistungen/${gruppe.id}`}
+                                aria-label={`Mehr zu ${gruppe.title}`}
                                 className={`relative ${colors.header} overflow-hidden`}
                                 style={{ minHeight: "200px" }}
                             >
@@ -346,27 +349,54 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center">
-                        {clientLogos.map((client) => (
-                            <div
-                                key={client.name}
-                                className={`flex items-center justify-center p-8 border h-36 sm:h-44 sm:grayscale sm:hover:grayscale-0 transition-all duration-300 ${
-                                    client.src === "/clients/Download.png"
-                                        ? "bg-logo-blue border-logo-blue/20"
-                                        : "bg-white border-gray-200"
-                                }`}
-                            >
-                                <div className="relative w-full h-full">
-                                    <ImageWithFallback
-                                        src={client.src}
-                                        alt={client.name}
-                                        title={client.name}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                            </div>
-                        ))}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                        {clientLogos.map((client, index) => {
+                            const total = clientLogos.length;
+                            const cols = 3;
+                            const lastRowCount = total % cols;
+                            const isInLastRow = lastRowCount !== 0 && index >= total - lastRowCount;
+                            const isLoneLastCard = lastRowCount === 1 && isInLastRow;
+
+                            return (() => {
+                                const cardClass = `group flex items-center justify-center p-6 border h-36 sm:h-44 transition-all duration-300
+                                    hover:scale-[1.03] hover:shadow-lg hover:z-10 relative
+                                    sm:grayscale sm:hover:grayscale-0
+                                    bg-white border-gray-200 hover:border-gray-300
+                                    ${isLoneLastCard ? "sm:col-start-2" : ""}
+                                    ${client.href ? "cursor-pointer" : "cursor-default"}
+                                `;
+                                const inner = (
+                                    <div className="relative w-full" style={{ height: "70px" }}>
+                                        <ImageWithFallback
+                                            src={client.src}
+                                            alt={client.name}
+                                            title={client.name}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                );
+                                if (client.href) {
+                                    return (
+                                        <a
+                                            key={client.name}
+                                            href={client.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={cardClass}
+                                        >
+                                            {inner}
+                                        </a>
+                                    );
+                                }
+                                return (
+                                    <div key={client.name} className={cardClass}>
+                                        {inner}
+                                    </div>
+                                );
+                            })();
+
+                        })}
                     </div>
                 </div>
             </section>

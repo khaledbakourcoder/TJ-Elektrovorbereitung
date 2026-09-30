@@ -1,0 +1,68 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Verhindert, dass Ordnerinhalte im Browser aufgelistet werden
+  Options -Indexes
+
+  # 1. Prüfen: Gibt es zur URL eine passende .html-Datei? Dann lade diese!
+  RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+
+  # 2. Fehlerbehandlung: Wenn weder Datei noch Ordner existieren, zeige die 404-Seite
+  ErrorDocument 404 /404.html
+</IfModule>
+
+# ── GZIP-Komprimierung ────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff font/woff2 application/font-woff
+</IfModule>
+
+# ── Browser-Cache (löst "Effiziente Verweildauer im Cache") ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML – kurz cachen (Inhalt ändert sich öfter)
+  ExpiresByType text/html                   "access plus 1 hour"
+
+  # Bilder – 1 Jahr (ändern sich selten)
+  ExpiresByType image/jpeg                  "access plus 1 year"
+  ExpiresByType image/jpg                   "access plus 1 year"
+  ExpiresByType image/png                   "access plus 1 year"
+  ExpiresByType image/webp                  "access plus 1 year"
+  ExpiresByType image/avif                  "access plus 1 year"
+  ExpiresByType image/svg+xml               "access plus 1 year"
+  ExpiresByType image/gif                   "access plus 1 year"
+  ExpiresByType image/x-icon                "access plus 1 year"
+
+  # CSS & JavaScript – 1 Jahr (Next.js verwendet Hash-Dateinamen)
+  ExpiresByType text/css                    "access plus 1 year"
+  ExpiresByType application/javascript      "access plus 1 year"
+  ExpiresByType text/javascript             "access plus 1 year"
+
+  # Fonts – 1 Jahr
+  ExpiresByType font/woff                   "access plus 1 year"
+  ExpiresByType font/woff2                  "access plus 1 year"
+  ExpiresByType application/font-woff       "access plus 1 year"
+  ExpiresByType application/font-woff2      "access plus 1 year"
+</IfModule>
+
+# ── Cache-Control Headers ────────────────────────────────────
+<IfModule mod_headers.c>
+  # Statische Assets (JS, CSS, Bilder, Fonts) – 1 Jahr immutable
+  <FilesMatch "\.(js|css|woff|woff2|ttf|jpg|jpeg|png|webp|avif|svg|gif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML – immer neu prüfen
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # Security Headers (verbessert Lighthouse Security-Score)
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

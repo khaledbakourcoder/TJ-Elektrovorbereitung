@@ -5,27 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29d8ea71-f348-4108-a7dd-9b87c16dbb72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/clients/WhatsApp Image 2026-07-28 at 16.15.54.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/MainService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Data/MainService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Types/Service.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Types/Service.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/impressum/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/impressum/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leistungsgruppen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leistungsgruppen.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/kontakt/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/kontakt/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/leistungen/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/leistungen/[gruppe]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/leistungen/[gruppe]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OtherServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OtherServices.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/QuoteRequestBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/QuoteRequestBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ServiceDescription.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ServiceDescription.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ServiceSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ServiceSections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/clients/client-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/clients/client-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/clients/client-3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/clients/client-4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/clients/client-5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/clients/client-6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ReferenceGallery.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/115247.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/Download.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/clients/WhatsApp Image 2026-07-28 at 16.15.54.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/abbruch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/elektrovorbereitung.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/fraesen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/kernbohrung.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/schlitzen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/stemmen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/references/kernbohrung-ergebnis.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/references/schlitzen-detail-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/services/beton-fraesen-boden.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/services/kernbohrung-stahlbeton.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/services/stemmarbeiten-mauerwerk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/services/wand-schlitzen-mauerwerk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/screenshot-elektrovorbereitung.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/screenshot-home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/screenshot-redesign-gruppe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/screenshot-redesign-home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/screenshot-redesign-schlitzen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/screenshot-schlitzen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +97,8 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/clients" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/clients" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -116,7 +135,10 @@
       <workItem from="1784522133304" duration="3067000" />
       <workItem from="1784580967430" duration="19514000" />
       <workItem from="1785173457041" duration="2057000" />
-      <workItem from="1785323482935" duration="8958000" />
+      <workItem from="1785323482935" duration="11127000" />
+      <workItem from="1786180840531" duration="881000" />
+      <workItem from="1786947157777" duration="4834000" />
+      <workItem from="1790495086871" duration="2308000" />
     </task>
     <servers />
   </component>
