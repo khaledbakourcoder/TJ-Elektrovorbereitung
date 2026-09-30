@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Impressum",
-    description: "Angaben gemäß § 5 TMG – TJ Elektrovorbereitung, Inhaber Taha Alabd.",
+    description: "Angaben gemäß § 5 DDG – TJ Elektrovorbereitung, Inhaber Taha Alabd.",
 };
 
 export default function ImpressumPage() {
@@ -16,14 +16,13 @@ export default function ImpressumPage() {
 
                 <section className="mb-10">
                     <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
-                        Angaben gemäß § 5 TMG
+                        Angaben gemäß § 5 DDG
                     </p>
                     <div className="space-y-1 text-gray-700 leading-relaxed">
                         <p>Taha Alabd</p>
                         <p>TJ Elektrovorbereitung</p>
                         <p>Thomas Mann Straße 12</p>
                         <p>24937 Flensburg</p>
-                        <p>Steuernummer: 1500901057</p>
                     </div>
                 </section>
 

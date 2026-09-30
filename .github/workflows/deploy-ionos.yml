@@ -1,0 +1,61 @@
+name: Deploy zu IONOS
+
+on:
+  # Automatischer Upload bei Push – erst aktivieren, wenn ein Testlauf geklappt hat.
+  # push:
+  #   branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Testlauf: nur anzeigen, nichts hochladen oder löschen"
+        type: boolean
+        default: true
+
+concurrency:
+  group: deploy-ionos
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: out/ per SFTP zu IONOS hochladen
+        env:
+          SFTP_HOST: ${{ secrets.IONOS_SFTP_HOST }}
+          SFTP_USER: ${{ secrets.IONOS_SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.IONOS_SFTP_PASSWORD }}
+          SFTP_TARGET_DIR: ${{ secrets.IONOS_TARGET_DIR }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          # Schutz: Auf dem Webspace liegen weitere Seiten (Tj-Objektservice, logs).
+          # --delete darf nur im Ordner der Website laufen, nie im Root.
+          case "$SFTP_TARGET_DIR" in
+            /tj-elektrovorbereitung|/tj-elektrovorbereitung/) ;;
+            *) echo "IONOS_TARGET_DIR muss genau /tj-elektrovorbereitung sein (ist: '$SFTP_TARGET_DIR')."; exit 1 ;;
+          esac
+          # Kein Upload, wenn der Build keine Website erzeugt hat – sonst würde --delete den Ordner leeren.
+          if [ ! -f out/index.html ]; then echo "out/index.html fehlt – Upload abgebrochen."; exit 1; fi
+          MIRROR_OPTS=""
+          if [ "$DRY_RUN" = "true" ]; then
+            MIRROR_OPTS="--dry-run"
+            echo "=== TESTLAUF: Es wird nichts hochgeladen oder gelöscht ==="
+          fi
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -e "
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            open -u \"$SFTP_USER\",\"$SFTP_PASSWORD\" sftp://$SFTP_HOST;
+            cls -la /;
+            mirror --reverse --delete --verbose --parallel=4 $MIRROR_OPTS out/ \"$SFTP_TARGET_DIR\";
+            bye
+          "

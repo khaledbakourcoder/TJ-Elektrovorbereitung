@@ -20,6 +20,7 @@ const clientLogos = [
     { name: "AMH-Elektrotechnik GmbH & Co. KG", src: "/clients/amh-elektrotechnik.png", href: "https://www.amh-elektrotechnik.de/home.html" },
     { name: "Elektro Nicolaisen", src: "/clients/logo.png", href: "https://www.elektro-nicolaisen.de/" },
     { name: "DP Versorgungstechnik", src: "/clients/dp-versorgungstechnik.png", href: "https://dp-versorgungstechnik.de/" },
+    { name: "Elektro Görtz", src: "/clients/elektro-goertz-logo.png", href: "https://www.elektro-goertz-fl.de/" },
 ];
 
 /* ── Industrial SVG icons per group ─────────────────────────── */
