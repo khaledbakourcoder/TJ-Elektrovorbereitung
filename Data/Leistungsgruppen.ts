@@ -5,7 +5,7 @@ import { IServiceGroup } from "@/Types/Service.type";
  *
  * Struktur:
  *  1. Elektrovorbereitung  – Schlitzen, Fräsen, Stemmen, Leitung verlegen, Trassenbau
- *  2. Kernbohrung          – Ø 200 mm-Bohrungen, Wände sägen
+ *  2. Kernbohrung          – Ø bis 1000 mm-Bohrungen, Wände sägen
  *  3. Abbrucharbeiten      – NUR Kleinformat: Wände abreißen, Fliesen abstemmen, Estrich abklopfen
  */
 export const LEISTUNGSGRUPPEN: IServiceGroup[] = [
@@ -61,14 +61,14 @@ export const LEISTUNGSGRUPPEN: IServiceGroup[] = [
         title: "Kernbohrung",
         subTitle: "Erschütterungsfreie Bohrungen & Wandsägen",
         description:
-            "Runde Löcher für Leitungen, Lüftung, Sanitär. Diamantbohrer bis 200 mm – erschütterungsfrei, kein Rissrisiko, auch im Altbau.",
+            "Runde Löcher für Leitungen, Lüftung, Sanitär. Diamantbohrer bis 1000 mm – erschütterungsfrei, kein Rissrisiko, auch im Altbau.",
         icon: "/icons/kernbohrung.svg",
         subServices: [
             {
                 id: "kernbohrung-200mm",
                 title: "Kernbohrung",
                 shortDescription:
-                    "Bis 200 mm durch Stahlbeton, Mauerwerk und Naturstein. Nass oder trocken – sauber und maßgenau.",
+                    "Bis 1000 mm durch Stahlbeton, Mauerwerk und Naturstein. Nass oder trocken – sauber und maßgenau.",
             },
             {
                 id: "waende-saegen",

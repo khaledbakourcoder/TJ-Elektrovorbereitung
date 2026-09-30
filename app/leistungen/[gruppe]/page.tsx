@@ -149,7 +149,7 @@ const SubServiceIcon = (id: string) => {
                 <line x1="6" y1="25" x2="6" y2="31" strokeWidth={1} opacity={0.4} />
                 <line x1="38" y1="28" x2="42" y2="28" strokeWidth={1} opacity={0.4} />
                 <line x1="42" y1="25" x2="42" y2="31" strokeWidth={1} opacity={0.4} />
-                <text x="14" y="12" fontSize="6" opacity={0.4} fontFamily="monospace">Ø200</text>
+                <text x="12" y="12" fontSize="6" opacity={0.4} fontFamily="monospace">Ø1000</text>
             </svg>
         ),
         "waende-saegen": (
@@ -239,7 +239,7 @@ const subServiceSpecs: Record<string, { label: string; value: string }[]> = {
     ],
     "kernbohrung-200mm": [
         { label: "Verfahren", value: "Diamantbohrung" },
-        { label: "Durchmesser", value: "Bis 200 mm" },
+        { label: "Durchmesser", value: "Bis 1000 mm" },
         { label: "Erschütterung", value: "Vibrationsfrei" },
     ],
     "waende-saegen": [
