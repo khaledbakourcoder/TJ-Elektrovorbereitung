@@ -1,9 +1,10 @@
 name: Deploy zu IONOS
 
 on:
-  # Automatischer Upload bei Push – erst aktivieren, wenn ein Testlauf geklappt hat.
-  # push:
-  #   branches: [main]
+  # Jeder Push auf main lädt die Seite hoch (echter Upload, kein Testlauf).
+  push:
+    branches: [main]
+  # Manuell starten: standardmäßig nur Testlauf.
   workflow_dispatch:
     inputs:
       dry_run:
